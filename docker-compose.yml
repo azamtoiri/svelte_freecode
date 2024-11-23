@@ -1,0 +1,26 @@
+version: '3'
+services:
+  express-server:
+    build:
+      context: .
+      target: server
+    ports:
+      - '3000:3000'
+
+    volumes:
+      - static:/app/build
+    environment:
+      - NODE_ENV=production
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - '80:80'
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+      - static:/usr/share/nginx/html
+    depends_on:
+      - express-server
+
+volumes:
+  static:
