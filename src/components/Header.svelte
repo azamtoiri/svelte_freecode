@@ -3,13 +3,20 @@
 </script>
 
 <header class="relative z-20 flex flex-col">
-	<div class="mx-auto flex w-full max-w-[1400px] items-center justify-between p-4 py-6">
+	<div
+		class="mx-auto flex w-full max-w-[1400px]
+		items-center justify-between p-4 py-6"
+	>
 		<a href="/">
 			<h1 class="font-semibold">
 				Manaki <span class="text-indigo-400">Start</span> uP
 			</h1>
 		</a>
-		<button onclick={() => openModal.set(true)} aria-label="Open menu">
+		<button
+			onclick={() => openModal.set(true)}
+			class="grid place-items-center md:hidden"
+			aria-label="open-menu"
+		>
 			<i class="fa-solid fa-bars"></i>
 		</button>
 		<nav class="hidden items-center gap-4 md:flex lg:gap-6">

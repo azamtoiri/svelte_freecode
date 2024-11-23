@@ -67,5 +67,4 @@
 {@render children()}
 
 <Footer />
-
 <svelte:window bind:scrollY={y} bind:outerHeight />
