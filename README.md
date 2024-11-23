@@ -1,3 +1,5 @@
+# Simple svelte project
+This is simple svelte project with one page and tailwindcss using `runes`
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
